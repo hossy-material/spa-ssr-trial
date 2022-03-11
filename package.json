@@ -4,9 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node -r esm index.js"
+    "start": "node -r esm index.js",
+    "babel": "babel src -x '.js,.jsx' -d views"
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "core-js": "3",
     "eslint": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.25.4",
@@ -16,6 +22,8 @@
   },
   "dependencies": {
     "esm": "^3.2.25",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

@@ -1,10 +1,11 @@
 import express from 'express';
-import ssr from './src/ssr';
+import ssr from './views/ssr';
 
 const app = express();
 
 app.listen(3000);
 
 app.get('/', (_, res) => {
-  res.send(ssr());
+  const response = ssr();
+  res.send(response);
 });
