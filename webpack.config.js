@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   entry: {
-    client: './src/client.jsx',
+    client: './src/client.tsx',
   },
   output: {
     path: path.resolve(__dirname, 'assets'),
@@ -14,7 +14,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js(x?)$/,
+        test: /\.ts(x?)$/,
         exclude: /node_modules/,
         use: [
           {
@@ -36,6 +36,7 @@ module.exports = {
                     corejs: 3,
                   },
                 ],
+                '@babel/preset-typescript'
               ],
             },
           },

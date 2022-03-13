@@ -57,7 +57,7 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function CountUp() {
+var CountUp = function CountUp() {
   var _useState = (0, _react.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
       count = _useState2[0],
@@ -69,7 +69,7 @@ function CountUp() {
       return setCount(count + 1);
     }
   }, "+"), /*#__PURE__*/_react["default"].createElement("p", null, new Date().toTimeString()));
-}
+};
 
 var _default = CountUp;
 exports["default"] = _default;
